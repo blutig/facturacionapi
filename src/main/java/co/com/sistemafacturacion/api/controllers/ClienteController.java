@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import co.com.sistemafacturacion.api.modelo.Cliente;
 
 @RestController
-@RequestMapping(value = "/sistemaclientecion/clientes")
+@RequestMapping(value = "/sistemafacturacion/cliente")
 public class ClienteController {
 
 	@RequestMapping(method = RequestMethod.POST, value = "/crear")
