@@ -20,7 +20,7 @@ import co.com.sistemafacturacion.api.infraestructura.KafkaSender;
 import co.com.sistemafacturacion.api.modelo.Factura;
 
 @RestController
-@RequestMapping(value = "/sistemafacturacion")
+@RequestMapping(value = "/sistemafacturacion/factura")
 public class FacturaController {
 
 	@Value("${kafka.name-topic-sap}")
@@ -29,7 +29,7 @@ public class FacturaController {
 	@Autowired
 	private KafkaSender sender;
 
-	@RequestMapping(method = RequestMethod.POST, value = "/crear-factura")
+	@RequestMapping(method = RequestMethod.POST, value = "/crear")
 	public @ResponseBody ResponseEntity<Factura> crearFactura(@RequestBody Factura factura) {
 
 		Gson gson = new Gson();
